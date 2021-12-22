@@ -1,0 +1,102 @@
+:root{--red: #ab1e56;--black: #002d6a;}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    border: 0; outline: 0;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    margin: 0;padding: 0;
+    text-decoration: none;
+    transition: all .2s linear;
+    caret-color: var(--red);
+}
+::selection{background: var(--red);}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8px;
+    font-size: 70%;
+}
+section{padding: 15px 9%;}
+html::-webkit-scrollbar{width: 1rem;}
+html::-webkit-scrollbar-thumb{background: var(--red);}
+html::-webkit-scrollbar-track{background: #141215;}
+.heaing{
+    font-size: 25px;
+    text-align: center;
+    color: var(--black);
+    padding: 15px;
+    margin-top: 35px;
+}
+.heaing span{color: var(--red);}
+.btn{
+    background: #fad8e3;
+    color: var(--black);
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 10px 13px;
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+.btn:hover{background: var(--red);color: #fff;}
+
+
+.order{min-height: 100vh;}
+.order .controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 10px;
+}
+.order .controls .buttons{
+    border: 2px solid #fad8e3;
+    background: #fad8e3;
+    color: var(--black);
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px 8px;
+    margin: 8px;
+    cursor: pointer;
+}
+.order .controls .buttons:hover{background: var(--red);color: #fff;border: 2px solid var(--red)}
+.order .image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.order .image-container .image{
+    box-shadow: 0 .5rem 1rem;
+    width: 35rem;
+    border: 2px solid #fff;
+    margin: 5px;
+    padding: 9px;
+    overflow: hidden;
+}
+.order .image-container .image:hover{
+    border: 2px solid var(--red);
+}
+.order .image-container .image img{width: 100%;height: 200px;object-fit: cover;margin-bottom: 10px;cursor: pointer;}
+.order .image-container .image:hover img{transform: scale(1.1);}
+.order .image-container .image a{color: var(--black);font-size: 20px;padding: 10px;margin-bottom: 15px;}
+.order .image-container .image a:hover{color: var(--red);text-decoration: underline;}
+.order .image .rights{
+    text-align: left;
+}
+.order .image:hover .rights{
+    animation: rights 0.5s linear infinite;
+}
+@keyframes rights {
+    100% {
+        transform: translateX(10px);
+    }
+}
